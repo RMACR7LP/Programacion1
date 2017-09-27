@@ -8,7 +8,9 @@ def menu():
    print("no-presiona 0")
    print("si-presiona 1")
 
-usuario={}
+with open('usuarios.json') as json_data:
+    usuario =json.load(json_data)
+
 
 def login():
  menu()
