@@ -53,14 +53,19 @@ def login():
                                     login()
                                 else:
                                     password_dado=raw_input("Introduzca una password >> ")
-                                    d["usuarios"].append({
-                                        "nombre": nombre_dado,
-                                        "correo": correo_dado,
-                                        "password": password_dado
-                                    })
-                                    with open('usuarios.json','w') as entrada:
-                                        json.dump(d, entrada)
-                                        raw_input("Enhorabuena, has creado tu usuario")
+                                    verifier=raw_input("Verifique la password >> ")
+                                    if password_dado==verifier:
+                                        d["usuarios"].append({
+                                            "nombre": nombre_dado,
+                                            "correo": correo_dado,
+                                            "password": password_dado
+                                        })
+                                        with open('usuarios.json','w') as entrada:
+                                            json.dump(d, entrada)
+                                            raw_input("Enhorabuena, has creado tu usuario")
+                                            login()
+                                    else: 
+                                        raw_input("Las passwords son diferentes")
                                         login()
     elif opcionMenu=="0":
         cuenta_dado= raw_input("Ingrese correo o nombre de usuario >> ")
