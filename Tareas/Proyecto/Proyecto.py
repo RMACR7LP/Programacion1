@@ -368,7 +368,7 @@ def graph():
         d.save(formats=['gif'], outDir='.', fnRoot='grafica')
     
     photo1=PhotoImage(file="grafica.gif")
-    label=Label (tab4,image=photo1) .grid(row=3,column=15)    
+    label=Label (tab4,image=photo1) .grid(row=5,column=0)    
     label2= Label (tab4,text='grafica',fg="grafica") .grid(row=5,column=3)
 
 
