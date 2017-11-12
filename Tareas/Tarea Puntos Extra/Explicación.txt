@@ -1,0 +1,15 @@
+Primero escribi un código en el que metí cada uno de los números que aparecen como un elemento de una lista,
+luego como el problema dice que el texto encriptado consiste en palabras comunes en el ingles delimité que
+al hacer el xor sobre los números con clave el resultado solo podia tener caracteres como letras mayúsculas o 
+minúsculas lo que supone que si tomara cualquier elemento de la lista y le aplico xor con algún número entre
+97 y 122 (que son los codigos ASCII para las minusculas) solo podia darme de resultado un numero en los 
+intervalos (97,122) o (65,90) este último son las letras mayusculas. Sin embargo cuando apliqué el xor al 79 
+que es el primer número de la lista no hubo ningún resultado, entonces no empezaba en una letra, sino en un símbolo, 
+busqué los posibles símbolos que podía tener segun los codigos ASCII, además considerando de que si tenía que tener
+sentido, solo algunas de esas opciones podían estar al principio del texto y baje mis opciones a que ese 79 podía 
+ser unas comillas dobles, unas comillas simples, un paréntesis o un hashtag. Resulta que si uno hace xor entre la 
+palabra encriptada y la palabra origen el resultado es la clave para hacer el cifrado, entonces busque el caracter
+asociado a estas opciones y programe un for para que los otros dos caracteres los fuera variando en un string corto,
+luego probando y buscando entre los resultados si habia alguno que tuviera lógica, cuando meti el del paréntesis encontré un 
+"(The Gospel", de ahí solo se trató de buscar cuales habían sido los otros caracteres. La palabra clave era 'god'.
+
